@@ -1,0 +1,189 @@
+body {
+    text-align: center;
+    background: lightblue;
+    font-family: Arial, sans-serif;
+}
+
+.tulip {
+    position: relative;
+    width: 200px;
+    height: 280px;
+    margin: 50px auto;
+}
+
+.tulip-flower {
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    width: 130px;
+    height: 120px;
+}
+
+.tulip-petal {
+    position: absolute;
+    width: 75px;
+    height: 105px;
+    background: #d40023;
+    border-radius: 50% 50% 45% 45%;
+}
+
+.tulip-petal.left {
+    left: 0;
+    top: 15px;
+    transform: rotate(-18deg);
+}
+
+.tulip-petal.center {
+    left: 28px;
+    top: 0;
+    z-index: 2;
+    border-radius: 50% 50% 40% 40%;
+}
+
+.tulip-petal.right {
+    right: 0;
+    top: 15px;
+    transform: rotate(18deg);
+}
+
+.tulip-stem {
+    position: absolute;
+    width: 12px;
+    height: 150px;
+    background: green;
+    top: 105px;
+    left: 94px;
+    border-radius: 10px;
+}
+
+.tulip-leaf {
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    background: green;
+    border-radius: 100% 0;
+}
+
+.left-leaf {
+    top: 170px;
+    left: 45px;
+    transform: rotate(25deg);
+}
+
+.right-leaf {
+    top: 195px;
+    right: 35px;
+    transform: rotate(-25deg);
+}
+
+.letter-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #f5d6a6;
+    border: 2px solid #8b5e3c;
+    border-radius: 10px;
+}
+
+.letter {
+    position: absolute;
+    width: 400px;
+    height: 450px;
+    background: beige;
+    left: 50%;
+    top: 1px;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+    transition: 0.6s ease;
+    z-index: 4;
+    overflow-y: scroll;
+    text-align: left;
+}
+
+.letter.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-250px);
+}
+
+.letter h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.letter p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.ending {
+    font-weight: bold;
+    text-align: center;
+}
+
+.credit {
+    text-align: center;
+    font-size: 13px !important;
+    margin-top: 30px;
+}
+
+#heartButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 65px;
+    height: 65px;
+    border: none;
+    background: red;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 5;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    line-height: 65px;
+}
+
+#heartButton::before,
+#heartButton::after {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: red;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+#heartButton::before {
+    top: -32px;
+    left: 0;
+}
+
+#heartButton::after {
+    top: 0;
+    left: 32px;
+}
+
+#exitButton {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: transparent;
+    color: black;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10;
+}
